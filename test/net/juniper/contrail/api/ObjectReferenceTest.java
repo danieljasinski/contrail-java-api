@@ -30,6 +30,9 @@ public class ObjectReferenceTest extends TestCase {
     @Test
     public void testNullAttr() {
         VirtualMachineInterface vmi = new VirtualMachineInterface();
+        Project parent = new Project();
+        parent.setName("testproject");
+        vmi.setParent(parent);
         VirtualNetwork vn = new VirtualNetwork();
         vn.setName("testnet");
         vn.setUuid(UUID.randomUUID().toString());
